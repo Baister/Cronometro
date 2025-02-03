@@ -19,7 +19,9 @@ namespace Cronometro
             Console.WriteLine("Quanto tempo deseja contar?");
 
             string data = Console.ReadLine().ToLower(); // Não é feito um parse com isso, até porque ele é string
+            char type = char.Parse(data.Substring(data.Length - 1, 1));//15s ou 1234s a gente tem que sempre pegar o último dígito.
             Console.WriteLine(data);
+            Console.WriteLine(type);
         }
 
         static void Start(int time)
